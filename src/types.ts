@@ -1,62 +1,104 @@
 // Number Type
-let age: number = 10;
+let userold: number = 25;
+let productPrice: number = 49.99;
+let quantity: number = 3;
 
 // String Type
-let playerName: string = "Taskeen";
+let userName: string = "Alice";
+let productName: string = "Laptop";
+let greeting: string = "Hello, TypeScript!";
 
 // Boolean Type
-let isPlaying: boolean = true;
+let isActive: boolean = true;
+let isUserLoggedIn: boolean = false;
+let isProductAvailable: boolean = true;
 
-// Array of Numbers Type
-let numbers: number[] = [1, 2, 3, 4, 5];
+// Array Type
+let scores: number[] = [90, 85, 95, 88];
+let colors: string[] = ["Red", "Green", "Blue"];
+let temperatures: number[] = [25.5, 28, 22.7];
 
-// Tuple Type (an array with fixed elements and types)
-let coordinates: [number, number] = [10, 20];
+// Tuple Type
+let coordinates: [number, number] = [42, 30];
+let dimensions: [number, number, number] = [10, 20, 5];
+let rgbColor: [number, number, number] = [255, 0, 0];
 
-// Object Type with specific properties and types
-let player: { name: string, score: number } = { name: "Taskeen", score: 100 };
+// Object Type
+let userDetail: { name: string, age: number } = { name: "Alice", age: 25 };
+let productInfo: { name: string, price: number, inStock: boolean } = { name: "Laptop", price: 999.99, inStock: true };
+let employee: { id: number, name: string, department: string } = { id: 101, name: "Bob", department: "HR" };
 
-// Any Type (use with caution, allows dynamic typing)
-let dynamicValue: any = "I can be any type!";
+// Any Type
+let dynamicData: any = "I can be any type!";
+let dynamicNumber: any = 42;
+let dynamicArray: any[] = [1, "two", true];
 
 // Null Type
 let nullValue: null = null;
+let nullObject: null = null;
+let nullVariable: null = null;
 
 // Undefined Type
 let undefinedValue: undefined = undefined;
+let undefinedVariable: undefined = undefined;
+let undefinedArray: undefined[] = [undefined, undefined];
 
-// Union Type (can be a string or a number)
-let unionType: string | number = "Hello";
+// Union Type
+let userChoices: string | number = "Option A";
+let result: number | boolean = 42;
+let stat: string | boolean = true;
 
-// Enum Type (a set of named constants)
-enum Color {
-    Red,
-    Green,
-    Blue
+// Enum Type
+enum Status {
+    Active,
+    Inactive,
+    Pending
 }
-let favoriteColor: Color = Color.Blue;
+let userStatus: Status = Status.Active;
+let productStatus: Status = Status.Inactive;
+let orderStatus: Status = Status.Pending;
 
-// Void Type (represents the absence of a type, often used for functions with no return)
+// Void Type
 function logMessage(): void {
     console.log("This function doesn't return a value.");
 }
+function greetUser(): void {
+    console.log("Hello, user!");
+}
+function displayError(): void {
+    console.error("An error occurred!");
+}
 
-// Never Type (represents a value that never occurs, often used for functions that throw errors)
+// Never Type
 function throwError(message: string): never {
     throw new Error(message);
 }
+function infiniteLoop(): never {
+    while (true) {
+        console.log("This loop never ends!");
+    }
+}
+function unreachableCode(): never {
+    throw new Error("This code is never reached.");
+}
 
-// Outputting the values
-console.log("Age:", age);
-console.log("Player Name:", playerName);
-console.log("Is Playing:", isPlaying);
-console.log("Numbers:", numbers);
-console.log("Coordinates:", coordinates);
-console.log("Player:", player);
-console.log("Dynamic Value:", dynamicValue);
-console.log("Null Value:", nullValue);
-console.log("Undefined Value:", undefinedValue);
-console.log("Union Type:", unionType);
-console.log("Favorite Color:", favoriteColor);
-logMessage(); // Void function
-// throwError("An error occurred!"); // Never function
+// Symbol Type
+let uniqueSymbol1: symbol = Symbol("unique1");
+let uniqueSymbol2: symbol = Symbol("unique2");
+let uniqueSymbol3: symbol = Symbol("unique3");
+
+// Big Int Type
+let bigNumber1: bigint = 100n;
+let bigNumber2: bigint = 999n;
+let bigNumber3: bigint = 42n;
+
+// Literal Type
+let redColor: "Red" = "Red";
+let greenColor: "Green" = "Green";
+let blueColor: "Blue" = "Blue";
+
+// Type Aliases
+type Point = { x: number, y: number };
+let userLocation: Point = { x: 10, y: 20 };
+let productPosition: Point = { x: 5, y: 15 };
+let destination: Point = { x: 30, y: 40 };
