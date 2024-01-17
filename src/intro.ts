@@ -3,18 +3,12 @@ function greet(name: string): string {
     return `Hello, ${name}!`;
   }
   
-  const message = greet("TypeScript");
-  console.log(message);
-// Output:  Hello, TypeScript!
-
-
-// 2nd example
-// function parameters
-function calculateArea(length: number, width: number): number {
+  // function parameters
+  function calculate(length: number, width: number): number {
     return length * width;
   }
-  
-  const area = calculateArea(10, 5);
+
+  const area = calculate(10, 5);
   console.log(`Area of the rectangle: ${area}`);
     // Output: Area of the rectangle: 50
 
