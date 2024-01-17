@@ -41,7 +41,7 @@ let orderStatus = Status.Pending;
 function logMessage() {
     console.log("This function doesn't return a value.");
 }
-function greetUser() {
+function greetingUser() {
     console.log("Hello, user!");
 }
 function displayError() {
