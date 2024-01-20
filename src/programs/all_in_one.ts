@@ -17,7 +17,7 @@ class Person {
 }
 
 // Function to greet a person
-function greet(person: Person): void {
+function greets(person: Person): void {
     console.log(`Hello, ${person.getDetails()}!`);
 }
 
@@ -62,7 +62,7 @@ const performMathOperation: MathOperation = (a, b) => a + b;
 const john = new Person("John Doe", 25);
 
 // Greet the person
-greet(john);
+greets(john);
 
 // Use the DaysOfWeek enum
 const today: DaysOfWeek = DaysOfWeek.Wednesday;
